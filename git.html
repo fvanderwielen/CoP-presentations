@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>ngGoodies - the new tools from ngEurope</title>
+		<title>Git</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Florian van der Wielen">
@@ -43,231 +43,137 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>ng-Goodies</h1>
-					<h3>the new tools from ngEurope</h3>
+					<h1>Git</h1>
+					<h3>better source control</h3>
+                    <blockquote class="twitter-tweet" lang="en"><p>“If Git didn’t exist and I had to go back to handling complex merges with SVN I would probably become a Kayak instructor.” &lt;3 <a href="https://twitter.com/philsturgeon">@philsturgeon</a></p>&mdash; Chris Hartjes (@grmpyprogrammer) <a href="https://twitter.com/grmpyprogrammer/status/590260895181369344">April 20, 2015</a></blockquote>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 					<p>
 						<small>Florian van der Wielen / <a href="http://twitter.com/FlorianvdWielen">@FlorianvdWielen</a></small>
 					</p>
 				</section>
 
-				<section>
-					<h2>ui-router</h2>
-					<p>
-						
-					</p>
+    agenda, goal: concept and commands, compared to SVN
+        VCS
+        VCS commands
+        DVCS
+        DVCS commands
+        Wrap up
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+                <section>
+                    <h2>Version control system - branching and mergin model</h2>
+                    <p>Git: Directed Acyclic Graph (DAG) on the repo</p>
+                    <p>SVN: filesystem opration history from anywhere in the repo</p>
+                </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>
-							ng-route sucks! 
-						</h2>
-                        <ul>
-                            <li>using URL for navigation only</li>
-                            <li>limited in capabilities</li>
-                        </ul>
-					</section>
-                    <section>
-                        <h2>ng-route 2.0</h2>
-                        <ul>
-                            <li>new router for angular, by angular</li>
-                            <li>2.0, but also 1.3</li>
-                            <li>not finished yet...</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>angular-ui/ui-router</h2>
-                        <ul>
-                            <li>much more flexible</li>
-                            <li>navigation based on states, so conceptually different, </li>
-                            <li>concept is stronger, more expressive, matches better on a conceptual level</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Features</h2>
-                        <ul>
-                            <li>Nesting of navigation states</li>
-                            <li>Parallel navigation states</li>
-                            <li>Extensibility through decorators</li>
-                            <li>More...</li>
-                        </ul>
-                    </section>
-				</section>
-                
                 <section>
-                    <h2>ng-aria</h2>
-                    <p>http://marcysutton.github.io/angular-a11y</p>
+                    <h2>Terminology</h2>
+
+                    <p>Working tree: the files visible in the filesystem</p>
+
+                    <p>branch: pointer to a certain revision</p>
+
+                    <p>HEAD: special branch: branch currently in the working tree</p>
+
+                    <p>Staging: area where you group changes ready for next commit</p>
+                </section>
+
+                <section>
+                    <h2>Basic commands</h2>
+
+                    <p>status: check the current status of the repository</p>
+
+                    <p>add: adds certain changes to staging environment</p>
+
+                    <p>commit: adds the staged changes as one commit to HEAD</p>
+
+                    <p>reset: remove local changes from staging (undo)</p>
+
+                    <p>checkout: move HEAD to certain revision/branch</p>
+                </section>
+
+                <section>
+                    <h2>Distributed Revision Control System</h2>
+
+                    <p>Git: all repositories are peers, no master-slave</p>
+
+                    <p>Centralised serve as Single Point Of Truth</p>
+                </section>
+
+                <section>
+                    <h2>Distributed commands</h2>
+
+                    <p>remote: other git repositories on other locations</p>
+
+                    <p>Push: push a certain branch to a remote repo</p>
+
+                    <p>Pull: the reverse: retrieve a certain branch from a remote repo</p>
+
+                    <p>Fetch: get all changes from a remote</p>
+                </section>
+
+                <section>
+                    <h2>Advanced stuff</h2>
+                </section>
+
+                <section>
+                    <h2>branching</h2>
+
+                    <p>Creating another line of revisions in the graph</p>
                 </section>
                 <section>
-                    <section>
-                        <h2>#a11y</h2>
-                        <ul>
-                            <li>Write meaningful HTML</li>
-                            <li>Enable the keyboard</li>
-                            <li>Handle focus</li>
-                            <li>Alert the user</li>
-                            <li>Coverage with tests</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>ngAria</h2>
-                        <p>"The <b>ngAria</b> module provides support for adding <b>ARIA attributes</b> that convey <b>state or semantic information</b> about the application in order to allow <b>assistive technologies</b> to convey appropriate information to persons with disabilities"</p>
-                    </section>
-                    <section>
-                        <p>simply add:</p>
-                        <pre><code>
-                            <script src="angular-aria.js"></script>
-                        </code></pre>
-                        <pre><code>
-                            angular.module('app', ['ngAria']);
-                        </code></pre>
-                    </section>
-                    <section>
-                        <h2>ARIA attributes</h2>
-                        <ul>
-                            <li>Role: what does this thing do?</li>
-                            <li>State & preprty: the current condition of this particular thing</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <ul>
-                            <li>Material design</li>
-                            <li><a href="chrome://accessibility/">chrome://accessibility/</a></li>
-                        </ul>
-                    </section>
-                </section>
-                
-                <section>
-                    <h2>ng-hint</h2>
-                    <p>prevent silent errors</p>
+                    <h2>Merging</h2>
+
+                    <p>Merging two branch lines back together so development work is integrated</p>
                 </section>
                 <section>
-                    <section>
-                        <p>Simply add</p>
-                        <pre><code>
-                            &lt;html ng-app='sample' ng-hint&gt;
-                                <script src="hint.js"></script>
-                            &lt;html&gt;
-                        </code></pre>
-                    </section>
-                    <section>
-                        <p>hints on</p>
-                        <ul>
-                            <li>Controllers</li>
-                            <li>Directives</li>
-                            <li>DOM</li>
-                            <li>Events</li>
-                            <li>Interpolation</li>
-                            <li>Modules</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <p>hints on</p>
-                        <ul>
-                            <li>deprecated API</li>
-                            <li>naming conventions</li>
-                            <li>DOM manipulation</li>
-                            <li>identifiers that are undefined on the scope</li>
-                            <li>misspelling</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <p>implemented via decorators</p>
-                    </section>
-                </section>
-                
-                <section>
-                    <h2>Dgeni</h2>
-                    <p>documentation on steroids</p>
+                    <h2>Managed repositories</h2>
+
+                    <p>Repositories only used for managing activity such as CM</p>
                 </section>
                 <section>
-                    <section>
-                        <h2 class="fragment current-visible">docs matter!</h2>
-                        <h2 class="fragment current-visible">stale docs fail...</h2>
-                        <h2 class="fragment current-visible">Generate!</h2>
-                    </section>
-                    <section>
-                        <h2>implementation</h2>
-                        <p>DI.js</p>
-                        <p>documentation pipeline</p>
-                    </section>
-                    <section>
-                        <h2>Documentation pipeline</h2>
-                        <p>chain of processors modifying source code to doclets</p>
-                        <ul>
-                            <li>filtering</li>
-                            <li>parsing</li>
-                            <li>templating</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Projects using Dgeni</h2>
-                        <ul>
-                            <li>Angular</li>
-                            <li>Protractor</li>
-                            <li>Angular Material</li>
-                            <li>Ionic</li>
-                        </ul>
-                    </section>
+                    <h2>Pull requests</h2>
+
+                    <p>Requests to pull a branch, not vanilla Git but commonly used</p>
                 </section>
-                
+
                 <section>
-                    <h2>Traceur</h2>
-                    <p>Transpiler to javascript</p>
+                    <h2>Wrap up</h2>
                 </section>
+
                 <section>
-                    <section>
-                        <h2>What's the use</h2>
-                        <p>Use features from the future today</p>
-                        <p>Write simpler, cleaner code and less boiler plate</p>
-                    </section>
-                    <section>
-                        <h2>ECMAscript Harmony features</h2>
-                        <ul>
-                            <li>Classes, Modules</li>
-                            <li>Deconstruction statement, Default parameters, Computed property names</li>
-                            <li>More...</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>AtScript</h2>
-                        <ul>
-                            <li class="fragment">Annotations: declarative metadata</li>
-                            <li class="fragment">Annotate types, fields</li>
-                            <li class="fragment">Validations through introspection</li>
-                            <li class="fragment">Optional, backwards compatible</li>
-                        </ul>
-                    </section>
+                    <h2>Getting started</h2>
+
+                    <p>try.github.io</p>
+
+                    <p>use the CLI!</p>
                 </section>
-                
+
                 <section>
-                    <h2>Benchpress</h2>
-                    <p>"Is this code fast enough?"</p>
+                    <h2>Problems</h2>
+
+                    <p>Trial and Error...?</p>
+
+                    <p>Ask your colleagues</p>
                 </section>
+
                 <section>
-                    <section>
-                        <p>60 fps web apps</p>
-                        <p>macro benchmarks</p>
-                    </section>
-                    <section>
-                        <p>A good benchmark is...</p>
-                        <ul>
-                            <li>Meaningful</li>
-                            <li>Actionable</li>
-                            <li>Accessible</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <p><a href="https://github.com/angular/benchpress">https://github.com/angular/benchpress</a></p>
-                        <p>In development, frequent breaking changes</p>
-                    </section>
+                    <h2>Useful links</h2>
+
+                    <p>Learning the basic commands: try.github.io</p>
+
+                    <p>Searchable FAQ: http://ricardofilipe.com/projects/firstaidgit/</p>
+
+                    <p>git website with documentation and videos: http://git-scm.com/doc</p>
                 </section>
-                
+
+                <section>
+                    <h2>Thanks</h2>
+
+                    <h2>Questions?</h2>
+
+                    <h2>Who is next?</h2>
+                </section>
+
                 <section>
                     <h2>Fin</h2>
                 </section>
