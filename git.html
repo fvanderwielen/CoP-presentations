@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -52,131 +52,161 @@
 					</p>
 				</section>
 
-    agenda, goal: concept and commands, compared to SVN
-        VCS
-        VCS commands
-        DVCS
-        DVCS commands
-        Wrap up
-
                 <section>
-                    <h2>Version control system - branching and mergin model</h2>
-                    <p>Git: Directed Acyclic Graph (DAG) on the repo</p>
-                    <p>SVN: filesystem opration history from anywhere in the repo</p>
+                    <section>
+                        <h2>Version control system - branching and mergin model</h2>
+
+                        <p>Git: Directed Acyclic Graph (DAG) on the repo</p>
+
+                        <p>SVN: filesystem opration history from anywhere in the repo</p>
+                    </section>
+
+                    <section>
+                        <h2>Terminology</h2>
+
+                        <p>Working tree: the files visible in the filesystem</p>
+
+                        <p>branch: pointer to a certain revision</p>
+
+                        <p>HEAD: special branch: branch currently in the working tree</p>
+
+                        <p>Staging: area where you group changes ready for next commit</p>
+                    </section>
+
+                    <section>
+                        <h2>Basic commands</h2>
+
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>status</td>
+                                <td>check the current status of the repository</td>
+                            </tr>
+                            <tr>
+                                <td>add</td>
+                                <td>adds certain changes to staging environment</td>
+                            </tr>
+                            <tr>
+                                <td>commit</td>
+                                <td>adds the staged changes as one commit to HEAD</td>
+                            </tr>
+                            <tr>
+                                <td>reset</td>
+                                <td>remove local changes from staging (undo)</td>
+                            </tr>
+                            <tr>
+                                <td>checkout</td>
+                                <td>move HEAD to certain revision/branch</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Terminology</h2>
+                    <section>
+                        <h2>Distributed Revision Control System</h2>
 
-                    <p>Working tree: the files visible in the filesystem</p>
+                        <p>Git: all repositories are peers, no master-slave</p>
 
-                    <p>branch: pointer to a certain revision</p>
+                        <p>SVN: Centralised serve as Single Point Of Truth</p>
+                    </section>
 
-                    <p>HEAD: special branch: branch currently in the working tree</p>
+                    <section>
+                        <h2>Distributed commands</h2>
 
-                    <p>Staging: area where you group changes ready for next commit</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>Remote</td>
+                                <td>other git repositories on other locations</td>
+                            </tr>
+                            <tr>
+                                <td>Push</td>
+                                <td>push a certain branch to a remote repository</td>
+                            </tr>
+                            <tr>
+                                <td>Pull</td>
+                                <td>the reverse: retrieve a certain branch from a remote repo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Basic commands</h2>
+                    <section>
+                        <h2>Advanced stuff</h2>
+                    </section>
 
-                    <p>status: check the current status of the repository</p>
+                    <section>
+                        <h2>branching</h2>
 
-                    <p>add: adds certain changes to staging environment</p>
+                        <p>Creating another line of revisions in the graph</p>
+                    </section>
+                    <section>
+                        <h2>Merging</h2>
 
-                    <p>commit: adds the staged changes as one commit to HEAD</p>
+                        <p>Merging two branch lines back together so development work is integrated</p>
+                    </section>
+                    <section>
+                        <h2>Managed repositories</h2>
 
-                    <p>reset: remove local changes from staging (undo)</p>
+                        <p>Repositories only used for managing activity such as CM</p>
+                    </section>
+                    <section>
+                        <h2>Pull requests</h2>
 
-                    <p>checkout: move HEAD to certain revision/branch</p>
+                        <p>Requests to pull a branch, not vanilla Git but commonly used</p>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Distributed Revision Control System</h2>
+                    <section>
+                        <h2>Wrap up</h2>
+                    </section>
 
-                    <p>Git: all repositories are peers, no master-slave</p>
+                    <section>
+                        <h2>Getting started</h2>
 
-                    <p>Centralised serve as Single Point Of Truth</p>
+                        <p>try.github.io</p>
+
+                        <p>use the CLI!</p>
+                    </section>
+
+                    <section>
+                        <h2>Problems</h2>
+
+                        <p>Trial and Error...?</p>
+
+                        <p>Ask your colleagues</p>
+                    </section>
+
+                    <section>
+                        <h2>Useful links</h2>
+
+                        <p>Learning the basic commands: try.github.io</p>
+
+                        <p>Searchable FAQ: http://ricardofilipe.com/projects/firstaidgit/</p>
+
+                        <p>git website with documentation and videos: http://git-scm.com/doc</p>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Distributed commands</h2>
+                    <section><h2>Thanks</h2></section>
 
-                    <p>remote: other git repositories on other locations</p>
+                    <section><h2>Questions?</h2></section>
 
-                    <p>Push: push a certain branch to a remote repo</p>
+                    <section><h2>Who is next?</h2></section>
 
-                    <p>Pull: the reverse: retrieve a certain branch from a remote repo</p>
 
-                    <p>Fetch: get all changes from a remote</p>
+                    <section>
+                        <h2>Fin</h2>
+                    </section>
                 </section>
 
-                <section>
-                    <h2>Advanced stuff</h2>
-                </section>
-
-                <section>
-                    <h2>branching</h2>
-
-                    <p>Creating another line of revisions in the graph</p>
-                </section>
-                <section>
-                    <h2>Merging</h2>
-
-                    <p>Merging two branch lines back together so development work is integrated</p>
-                </section>
-                <section>
-                    <h2>Managed repositories</h2>
-
-                    <p>Repositories only used for managing activity such as CM</p>
-                </section>
-                <section>
-                    <h2>Pull requests</h2>
-
-                    <p>Requests to pull a branch, not vanilla Git but commonly used</p>
-                </section>
-
-                <section>
-                    <h2>Wrap up</h2>
-                </section>
-
-                <section>
-                    <h2>Getting started</h2>
-
-                    <p>try.github.io</p>
-
-                    <p>use the CLI!</p>
-                </section>
-
-                <section>
-                    <h2>Problems</h2>
-
-                    <p>Trial and Error...?</p>
-
-                    <p>Ask your colleagues</p>
-                </section>
-
-                <section>
-                    <h2>Useful links</h2>
-
-                    <p>Learning the basic commands: try.github.io</p>
-
-                    <p>Searchable FAQ: http://ricardofilipe.com/projects/firstaidgit/</p>
-
-                    <p>git website with documentation and videos: http://git-scm.com/doc</p>
-                </section>
-
-                <section>
-                    <h2>Thanks</h2>
-
-                    <h2>Questions?</h2>
-
-                    <h2>Who is next?</h2>
-                </section>
-
-                <section>
-                    <h2>Fin</h2>
-                </section>
 
 			</div>
 
